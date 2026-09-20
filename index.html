@@ -81,6 +81,34 @@
   .proof{padding-top:42px;padding-bottom:56px}
 }
 
+
+/* PROJECT PUZZLE RESTORE — locked layout */
+@media(min-width:851px){
+  .work .projects{
+    display:grid;
+    grid-template-columns:repeat(3,minmax(0,1fr));
+    gap:24px;
+    align-items:start;
+  }
+  .work .project-column,
+  .work .project-column:nth-child(3){
+    display:flex;
+    flex-direction:column;
+    gap:24px;
+    grid-column:auto;
+    grid-template-columns:none;
+  }
+  .work .project-column:nth-child(1){padding-top:0}
+  .work .project-column:nth-child(2){padding-top:70px}
+  .work .project-column:nth-child(3){padding-top:28px}
+  .work .project.p1 .image{height:390px;aspect-ratio:auto!important}
+  .work .project.p2 .image{height:320px;aspect-ratio:auto!important}
+  .work .project.p3 .image{height:450px;aspect-ratio:auto!important}
+  .work .project.p4 .image{height:270px;aspect-ratio:auto!important}
+  .work .project.p5 .image{height:410px;aspect-ratio:auto!important}
+  .work .project.p6 .image{height:300px;aspect-ratio:auto!important}
+}
+
 </style>
 </head>
 <body>
