@@ -82,31 +82,26 @@
 }
 
 
-/* PROJECT PUZZLE RESTORE — locked layout */
-@media(min-width:851px){
-  .work .projects{
-    display:grid;
-    grid-template-columns:repeat(3,minmax(0,1fr));
-    gap:24px;
-    align-items:start;
-  }
-  .work .project-column,
-  .work .project-column:nth-child(3){
-    display:flex;
-    flex-direction:column;
-    gap:24px;
-    grid-column:auto;
-    grid-template-columns:none;
-  }
-  .work .project-column:nth-child(1){padding-top:0}
-  .work .project-column:nth-child(2){padding-top:70px}
-  .work .project-column:nth-child(3){padding-top:28px}
-  .work .project.p1 .image{height:390px;aspect-ratio:auto!important}
-  .work .project.p2 .image{height:320px;aspect-ratio:auto!important}
-  .work .project.p3 .image{height:450px;aspect-ratio:auto!important}
-  .work .project.p4 .image{height:270px;aspect-ratio:auto!important}
-  .work .project.p5 .image{height:410px;aspect-ratio:auto!important}
-  .work .project.p6 .image{height:300px;aspect-ratio:auto!important}
+/* PROJECT PUZZLE — exact V9 layout */
+.work .projects{grid-template-columns:repeat(3,minmax(0,1fr));gap:32px;align-items:start}
+.work .project-column{display:flex;flex-direction:column;gap:32px;padding-top:0!important}
+.work .project .image{height:auto!important;aspect-ratio:4/3!important}
+.work .project.p2 .image,.work .project.p4 .image,.work .project.p6 .image{aspect-ratio:3/4!important}
+.work .project-meta{display:flex;flex-wrap:wrap;gap:8px 16px;margin-top:14px;align-items:baseline;justify-content:space-between}
+.work .project-meta h3{font-size:clamp(20px,1.8vw,28px);margin-bottom:0}
+.work .project-meta div{font-size:13px;text-align:left}
+.work .work-cta .btn{min-height:52px}
+@media(max-width:1100px){.work .projects{gap:40px 24px}}
+@media(max-width:850px){
+  .work .projects{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .work .project-column{display:contents!important}
+  .work .p1{order:1}.work .p2{order:2}.work .p3{order:3}.work .p4{order:4}.work .p5{order:5}.work .p6{order:6}
+  .work .project:nth-child(n) .image{height:auto!important;aspect-ratio:4/3!important}
+}
+@media(max-width:560px){
+  .work .projects{grid-template-columns:1fr;gap:32px}
+  .work .project-meta h3{font-size:22px}
+  .work .work-cta .btn{width:100%}
 }
 
 </style>
